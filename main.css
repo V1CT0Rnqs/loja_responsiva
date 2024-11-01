@@ -1,0 +1,621 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 16px 0 0;
+    border-top: 2px solid #050505;
+    border-bottom: 2px solid #050505;
+    margin-bottom: 56px;
+    background-color: rgb(251, 255, 0);
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu > li {
+    float: left;
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.menu li:hover {
+    border-color: rgb(0, 0, 0);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    border: 2px solid rgb(0, 0, 0);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    left: 0;
+    width: 120px;
+    top: 100%;
+    background-color: rgb(251, 255, 0);
+}
+
+.submenu li {
+    font-weight: bold;
+}
+
+.submenu li {
+    display: block;
+    padding: 8px;
+}
+
+/*a partir daqui é todo o site abaixo do Menu*/
+
+.sobre-loja {
+    display: flex;
+}
+
+.sobre-loja img {
+    height: 250px;
+    width: auto;
+    padding-right: 30px;
+}
+
+.text p {
+    padding-top: 20px;
+    border-top: 3px solid black;
+}
+
+.produtos h2{
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-bottom: 16px;
+}
+
+.produtos h3{
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.suplementos {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    column-gap: 1%;
+    row-gap: 5%;
+    padding: 16px;
+}
+
+.suplemento img {
+    max-width: 200px;
+    max-height: 200px;
+    justify-content: center;
+}
+
+.suplemento button {
+    width: 248px;
+    padding: 8px;
+    margin-top: 8px;
+    background-color: rgb(251, 255, 0);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.padding {
+    padding-bottom: 200px;
+}
+
+/* Media query para ecrãs de até 767px */
+@media screen and (max-width: 767px) {
+
+    .conteudo {
+        display: block;
+    }
+
+    /* Ajustar largura dos contêineres para ocupar toda a tela */
+    .container {
+        width: 90%;
+    }
+    
+    header .container {
+        display: block;
+        font-size: 1.5em;
+    }
+    
+    .suplementos {
+        display: block;
+    }
+
+    .suplementos .suplemento {
+        margin-bottom: 32px;
+    }
+
+    aside {
+        padding-left: 0px;
+    }
+
+    header div.container {
+        flex-direction: column;
+    }
+
+    .submenu {
+        display: block;
+        position: relative;
+        width: 100%;
+        border: none;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .submenu li a {
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.76);
+    }
+
+    .menu {
+        display: block;
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+
+    .menu > li {
+        clear: both;
+    }
+    
+    .submenu li {
+        display: block;
+        padding: 8px;
+    }
+
+    /* Ajuste para o botão "Abrir Menu" visível apenas em telas menores */
+    .botao-menu {
+        display: block;
+        justify-content: center;
+        margin-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .botao-menu button {
+        border: none;
+        background-color: black;
+        color: yellow;
+        font-weight: bold;
+        border-radius: 8px;
+        height: 50px;
+        width: 100px;
+        padding: 8px;
+    }
+    
+    .sobre-loja {
+        display: block;
+    }
+    
+    .sobre-loja img {
+        align-items: center;
+        max-width: 100%;
+    }
+}
+
+/* Ocultar o botão "Abrir Menu" em resoluções acima de 767px */
+@media screen and (min-width: 768px) {
+    .botao-menu {
+        display: none;
+    }
+}
+
+/*a partir daqui é todo o site abaixo do Menu*/
+
+.sobre-loja {
+    display: flex;
+}
+
+.sobre-loja img {
+    height: 250px;
+    width: auto;
+    padding-right: 30px;
+}
+
+.text p {
+    padding-top: 20px;
+    border-top: 3px solid black;
+}
+
+.produtos h2{
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-bottom: 16px;
+}
+
+.produtos h3{
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.suplementos {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    column-gap: 1%;
+    row-gap: 5%;
+    padding: 16px;
+    /*border: 1px solid black;*/
+}
+
+.suplemento img {
+    max-width: 200px;
+    max-height: 200px;
+    justify-content: center;
+}
+
+.suplemento button {
+    width: 248px;
+    padding: 8px;
+    margin-top: 8px;
+    background-color: rgb(251, 255, 0);
+    color: #000;font-weight: bold;
+    cursor: pointer;
+}
+
+.padding{
+    padding-bottom: 200px;
+}
+
+/* Media query para ecrãs de até 767px */
+
+@media screen and (max-width: 767px) {
+
+    .conteudo {
+        display: block;
+    }
+    /* Ajustar largura dos contêineres para ocupar toda a tela */
+    .container {
+        width: 90%;
+    }
+    
+    header .container {
+        display: block;
+        font-size: 1.5em;
+    }
+    
+    header {
+        padding: 16px 0 0;
+        border-top: 2px solid #050505;
+        border-bottom: 2px solid #050505;
+        margin-bottom: 56px;
+        background-color: rgb(251, 255, 0);
+    }
+
+    .suplementos {
+        display: block;
+    }
+
+    .suplementos .suplemento {
+        margin-bottom: 32px;
+    }
+
+    aside {
+        padding-left:  0px;
+    }
+
+    header div.container {
+        flex-direction: column;
+    }
+    
+    .submenu {
+        display: block;
+        position: relative;
+        width: 100%;
+        border: none;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .submenu li a{
+        font-weight: 400;
+        color:rgba(0, 0, 0, 0.76);
+    }
+
+    .menu {
+        display: block;
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+
+    .menu > li {
+        clear: both;
+    }
+    
+    .submenu li {
+        display: block;
+        padding: 8px;
+    }
+
+    .botao-menu button{
+        border: none;
+        background-color: black;
+        color: yellow;
+        font-weight: bold;
+        border-radius: 8px;
+        height: 50px;
+        width: 100px;
+    }
+    
+    .botao-menu {
+        display: block;
+        justify-content: center;
+        margin-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .botao-menu button {
+        padding: 8px;
+    }
+    
+    .sobre-loja {
+        display: block;
+    }
+    
+    .sobre-loja img {
+        align-items: center;
+        max-width: 100%;
+    }
+}
+
+/* Layout geral para tablet */
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+
+    /* Ajuste de largura do container para tablets */
+    .container {
+        max-width: 90%; /* Reduz a largura do container */
+        padding: 0 10px;
+    }
+
+    /* Header e título para tablet */
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Ajuste do tamanho do título */
+    }
+
+    /* Ajuste do botão de menu para tablets */
+    .botao-menu {
+        display: none; /* Oculta o botão do menu no layout tablet */
+    }
+
+    /* Menu visível para tablet */
+    .menu {
+        display: flex; /* Exibe o menu horizontalmente */
+        justify-content: center;
+    }
+
+    .menu > li {
+        padding: 12px 16px;
+    }
+
+    /* Submenu dropdown para tablets */
+    .submenu {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        display: none; /* Oculta o submenu por padrão */
+        background-color: rgb(251, 255, 0);
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 8px;
+        min-width: 150px;
+    }
+
+    .menu > li:hover .submenu {
+        display: block; /* Mostra o submenu ao passar o cursor */
+    }
+
+    /* Ajustes de seção "Sobre a Loja" */
+    .sobre-loja {
+        display: flex;
+        flex-direction: row; /* Alinha a imagem e texto lado a lado */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .sobre-loja img {
+        width: 50%; /* Ajusta a largura da imagem para metade da seção */
+        max-height: 250px;
+    }
+
+    .sobre-loja .text {
+        width: 50%;
+        font-size: 1.1em;
+    }
+
+    /* Grid de produtos para tablets */
+    .suplementos {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 colunas para dispositivos tablet */
+        gap: 20px;
+        padding: 16px;
+    }
+
+    /* Ajuste dos artigos de produtos */
+    .suplemento {
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .suplemento img {
+        max-width: 100%; /* A imagem ocupa 100% do artigo de produto */
+        height: auto;
+    }
+
+    .suplemento h3 {
+        font-size: 1.1em;
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+    .suplemento p {
+        font-size: 0.9em;
+        margin-bottom: 12px;
+    }
+
+    .suplemento button {
+        width: 100%; /* Botão ocupa a largura total do artigo */
+        padding: 8px;
+        font-size: 1em;
+        background-color: rgb(251, 255, 0);
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Ajuste de espaçamento para a seção de produtos */
+    .produtos h2 {
+        font-size: 1.5em;
+        padding-bottom: 12px;
+    }
+    
+    /* Ajustes de padding e margin para o conteúdo */
+    .conteudo {
+        padding: 16px 0;
+    }
+}
+
+/* Layout para Desktop (a partir de 1024px) */
+@media screen and (min-width: 1024px) {
+
+    /* Configuração do container para centralização e largura máxima */
+    .container {
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Header para Desktop */
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+    }
+
+    header h1 {
+        font-size: 2em; /* Tamanho maior do título */
+    }
+
+    /* Menu de navegação para desktop */
+    .menu {
+        display: flex;
+        gap: 20px;
+    }
+
+    .menu > li {
+        list-style: none;
+        padding: 16px 20px;
+    }
+
+    .menu > li:hover .submenu {
+        display: block; /* Submenu aparece ao passar o mouse */
+    }
+
+    /* Submenu */
+    .submenu {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: rgb(251, 255, 0);
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 8px;
+        min-width: 150px;
+        padding: 10px;
+    }
+
+    /* Seção "Sobre Nós" */
+    .sobre-loja {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+
+    .sobre-loja img {
+        width: 40%; /* Ajusta a imagem para ocupar 40% */
+        max-height: 300px;
+    }
+
+    .sobre-loja .text {
+        width: 60%; /* Ajusta o texto para ocupar 60% */
+        font-size: 1.2em;
+    }
+
+    /* Grid de Produtos para desktop */
+    .suplementos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+        gap: 20px;
+        padding: 16px;
+    }
+
+    .suplemento {
+        text-align: center;
+        padding: 16px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        transition: transform 0.3s ease; /* Efeito ao passar o mouse */
+    }
+
+    .suplemento:hover {
+        transform: scale(1.05); /* Aumenta ligeiramente no hover */
+    }
+
+    .suplemento img {
+        max-width: 100%; /* Imagem ocupa toda a largura do artigo */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .suplemento h3 {
+        font-size: 1.1em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .suplemento p {
+        font-size: 0.95em;
+        margin-bottom: 16px;
+    }
+
+    .suplemento button {
+        width: 100%; /* Botão ocupa a largura do artigo */
+        padding: 12px;
+        font-size: 1em;
+        background-color: rgb(251, 255, 0);
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Ajuste de espaçamento para a seção de produtos */
+    .produtos h2 {
+        font-size: 1.8em;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+    }
+}
